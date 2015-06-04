@@ -1,0 +1,541 @@
+VERSION 5.00
+Begin VB.PropertyPage PropBarra 
+   Caption         =   "Disposizione"
+   ClientHeight    =   3570
+   ClientLeft      =   0
+   ClientTop       =   0
+   ClientWidth     =   7290
+   ClipControls    =   0   'False
+   PaletteMode     =   0  'Halftone
+   ScaleHeight     =   3570
+   ScaleWidth      =   7290
+   Begin VB.TextBox TxtLeft 
+      Height          =   285
+      Index           =   11
+      Left            =   4920
+      TabIndex        =   40
+      Text            =   "0"
+      Top             =   3120
+      Width           =   1095
+   End
+   Begin VB.TextBox TxtLeft 
+      Height          =   285
+      Index           =   10
+      Left            =   4920
+      TabIndex        =   39
+      Text            =   "0"
+      Top             =   2280
+      Width           =   1095
+   End
+   Begin VB.TextBox TxtLeft 
+      Height          =   285
+      Index           =   9
+      Left            =   4920
+      TabIndex        =   38
+      Text            =   "0"
+      Top             =   1440
+      Width           =   1095
+   End
+   Begin VB.TextBox TxtLeft 
+      Height          =   285
+      Index           =   8
+      Left            =   4920
+      TabIndex        =   37
+      Text            =   "0"
+      Top             =   600
+      Width           =   1095
+   End
+   Begin VB.CheckBox Check1 
+      Caption         =   "Visibile"
+      Height          =   255
+      Index           =   11
+      Left            =   6120
+      TabIndex        =   36
+      Top             =   3120
+      Width           =   975
+   End
+   Begin VB.CheckBox Abilitato 
+      BackColor       =   &H00C0C0C0&
+      Caption         =   "Entrata"
+      Height          =   375
+      Index           =   11
+      Left            =   4920
+      Style           =   1  'Graphical
+      TabIndex        =   35
+      Top             =   2760
+      Width           =   1095
+   End
+   Begin VB.CheckBox Check1 
+      Caption         =   "Visibile"
+      Height          =   255
+      Index           =   10
+      Left            =   6120
+      TabIndex        =   34
+      Top             =   2280
+      Width           =   975
+   End
+   Begin VB.CheckBox Abilitato 
+      BackColor       =   &H00C0C0C0&
+      Caption         =   "Taglio"
+      Height          =   375
+      Index           =   10
+      Left            =   4920
+      Style           =   1  'Graphical
+      TabIndex        =   33
+      Top             =   1920
+      Width           =   1095
+   End
+   Begin VB.CheckBox Check1 
+      Caption         =   "Visibile"
+      Height          =   255
+      Index           =   9
+      Left            =   6120
+      TabIndex        =   32
+      Top             =   1440
+      Width           =   975
+   End
+   Begin VB.CheckBox Abilitato 
+      BackColor       =   &H00C0C0C0&
+      Caption         =   "WB"
+      Height          =   375
+      Index           =   9
+      Left            =   4920
+      Style           =   1  'Graphical
+      TabIndex        =   31
+      Top             =   1080
+      Width           =   1095
+   End
+   Begin VB.TextBox TxtLeft 
+      Height          =   285
+      Index           =   7
+      Left            =   2640
+      TabIndex        =   12
+      Text            =   "0"
+      Top             =   3120
+      Width           =   1095
+   End
+   Begin VB.TextBox TxtLeft 
+      Height          =   285
+      Index           =   6
+      Left            =   2640
+      TabIndex        =   10
+      Text            =   "0"
+      Top             =   2280
+      Width           =   1095
+   End
+   Begin VB.TextBox TxtLeft 
+      Height          =   285
+      Index           =   5
+      Left            =   2640
+      TabIndex        =   8
+      Text            =   "0"
+      Top             =   1440
+      Width           =   1095
+   End
+   Begin VB.TextBox TxtLeft 
+      Height          =   285
+      Index           =   4
+      Left            =   2640
+      TabIndex        =   6
+      Text            =   "0"
+      Top             =   600
+      Width           =   1095
+   End
+   Begin VB.Frame Frame1 
+      BeginProperty Font 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   3495
+      Left            =   120
+      TabIndex        =   0
+      Top             =   0
+      Width           =   7095
+      Begin VB.CheckBox Check1 
+         Caption         =   "Visibile"
+         Height          =   255
+         Index           =   8
+         Left            =   6000
+         TabIndex        =   30
+         Top             =   600
+         Width           =   975
+      End
+      Begin VB.CheckBox Abilitato 
+         BackColor       =   &H00C0C0C0&
+         Caption         =   "Filettatrice"
+         Height          =   375
+         Index           =   8
+         Left            =   4800
+         Style           =   1  'Graphical
+         TabIndex        =   29
+         Top             =   240
+         Width           =   1095
+      End
+      Begin VB.CheckBox Abilitato 
+         BackColor       =   &H00C0C0C0&
+         Caption         =   "Smussatrice"
+         Height          =   375
+         Index           =   7
+         Left            =   2520
+         Style           =   1  'Graphical
+         TabIndex        =   28
+         Top             =   2760
+         Width           =   1095
+      End
+      Begin VB.CheckBox Abilitato 
+         BackColor       =   &H00C0C0C0&
+         Caption         =   "Allarmi"
+         Height          =   375
+         Index           =   6
+         Left            =   2520
+         Style           =   1  'Graphical
+         TabIndex        =   27
+         Top             =   1920
+         Width           =   1095
+      End
+      Begin VB.CheckBox Abilitato 
+         BackColor       =   &H00C0C0C0&
+         Caption         =   "Pesa"
+         Height          =   375
+         Index           =   5
+         Left            =   2520
+         Style           =   1  'Graphical
+         TabIndex        =   26
+         Top             =   1080
+         Width           =   1095
+      End
+      Begin VB.CheckBox Abilitato 
+         BackColor       =   &H00C0C0C0&
+         Caption         =   "Regge"
+         Height          =   375
+         Index           =   4
+         Left            =   2520
+         Style           =   1  'Graphical
+         TabIndex        =   25
+         Top             =   240
+         Width           =   1095
+      End
+      Begin VB.CheckBox Abilitato 
+         BackColor       =   &H00C0C0C0&
+         Caption         =   "Pacco"
+         Height          =   375
+         Index           =   3
+         Left            =   120
+         Style           =   1  'Graphical
+         TabIndex        =   24
+         Top             =   2760
+         Width           =   1095
+      End
+      Begin VB.CheckBox Abilitato 
+         BackColor       =   &H00C0C0C0&
+         Caption         =   "Mappa"
+         Height          =   375
+         Index           =   2
+         Left            =   120
+         Style           =   1  'Graphical
+         TabIndex        =   23
+         Top             =   1920
+         Width           =   1095
+      End
+      Begin VB.CheckBox Abilitato 
+         BackColor       =   &H00C0C0C0&
+         Caption         =   "Storico"
+         Height          =   375
+         Index           =   1
+         Left            =   120
+         Style           =   1  'Graphical
+         TabIndex        =   22
+         Top             =   1080
+         Width           =   1095
+      End
+      Begin VB.CheckBox Abilitato 
+         BackColor       =   &H00C0C0C0&
+         Caption         =   "Ordini"
+         Height          =   375
+         Index           =   0
+         Left            =   120
+         MaskColor       =   &H00000080&
+         Style           =   1  'Graphical
+         TabIndex        =   21
+         Top             =   240
+         Width           =   1095
+      End
+      Begin VB.CheckBox Check1 
+         Caption         =   "Visibile"
+         Height          =   255
+         Index           =   7
+         Left            =   3720
+         TabIndex        =   20
+         Top             =   3120
+         Width           =   975
+      End
+      Begin VB.CheckBox Check1 
+         Caption         =   "Visibile"
+         Height          =   255
+         Index           =   6
+         Left            =   3720
+         TabIndex        =   19
+         Top             =   2280
+         Width           =   975
+      End
+      Begin VB.CheckBox Check1 
+         Caption         =   "Visibile"
+         Height          =   255
+         Index           =   5
+         Left            =   3720
+         TabIndex        =   18
+         Top             =   1440
+         Width           =   975
+      End
+      Begin VB.CheckBox Check1 
+         Caption         =   "Visibile"
+         Height          =   255
+         Index           =   4
+         Left            =   3720
+         TabIndex        =   17
+         Top             =   600
+         Width           =   975
+      End
+      Begin VB.CheckBox Check1 
+         Caption         =   "Visibile"
+         Height          =   255
+         Index           =   3
+         Left            =   1320
+         TabIndex        =   16
+         Top             =   3120
+         Width           =   1095
+      End
+      Begin VB.CheckBox Check1 
+         Caption         =   "Visibile"
+         Height          =   255
+         Index           =   2
+         Left            =   1320
+         TabIndex        =   15
+         Top             =   2280
+         Width           =   1095
+      End
+      Begin VB.CheckBox Check1 
+         Caption         =   "Visibile"
+         Height          =   255
+         Index           =   1
+         Left            =   1320
+         TabIndex        =   14
+         Top             =   1440
+         Width           =   1095
+      End
+      Begin VB.CheckBox Check1 
+         Caption         =   "Visibile"
+         Height          =   255
+         Index           =   0
+         Left            =   1320
+         TabIndex        =   13
+         Top             =   600
+         Width           =   1095
+      End
+      Begin VB.TextBox TxtLeft 
+         Height          =   285
+         Index           =   3
+         Left            =   120
+         TabIndex        =   4
+         Text            =   "0"
+         Top             =   3120
+         Width           =   1095
+      End
+      Begin VB.TextBox TxtLeft 
+         Height          =   285
+         Index           =   2
+         Left            =   120
+         TabIndex        =   3
+         Text            =   "0"
+         Top             =   2280
+         Width           =   1095
+      End
+      Begin VB.TextBox TxtLeft 
+         Height          =   285
+         Index           =   1
+         Left            =   120
+         TabIndex        =   2
+         Text            =   "0"
+         Top             =   1440
+         Width           =   1095
+      End
+      Begin VB.TextBox TxtLeft 
+         BackColor       =   &H00FFFFFF&
+         Height          =   285
+         Index           =   0
+         Left            =   120
+         TabIndex        =   1
+         Text            =   "0"
+         Top             =   600
+         Width           =   1095
+      End
+   End
+   Begin VB.Label lblPulsante 
+      Caption         =   "Label1"
+      Height          =   255
+      Index           =   7
+      Left            =   1560
+      TabIndex        =   11
+      Top             =   2160
+      Width           =   1215
+   End
+   Begin VB.Label lblPulsante 
+      Caption         =   "Label1"
+      Height          =   255
+      Index           =   6
+      Left            =   1560
+      TabIndex        =   9
+      Top             =   1560
+      Width           =   1215
+   End
+   Begin VB.Label lblPulsante 
+      Caption         =   "Label1"
+      Height          =   255
+      Index           =   5
+      Left            =   1560
+      TabIndex        =   7
+      Top             =   960
+      Width           =   1215
+   End
+   Begin VB.Label lblPulsante 
+      Caption         =   "Label1"
+      Height          =   255
+      Index           =   4
+      Left            =   1560
+      TabIndex        =   5
+      Top             =   360
+      Width           =   1215
+   End
+End
+Attribute VB_Name = "PropBarra"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = False
+Attribute VB_Exposed = False
+Option Explicit
+'se è stato cliccato il controllo 'abilitato' allora è stata cambiata una proprietà
+Private Sub Abilitato_Click(Index As Integer)
+Changed = True
+End Sub
+'se è stato cliccato il controllo 'check1' allora è stata cambiata una proprietà
+Private Sub Check1_Click(Index As Integer)
+Changed = True
+End Sub
+'se è stato cliccato il controllo 'TxtLeft' allora è stata cambiata una proprietà
+Private Sub TxtLeft_Change(Index As Integer)
+Changed = True
+End Sub
+
+'EVENTO applica cambiamenti alle proprietà
+
+Private Sub PropertyPage_ApplyChanges()
+SelectedControls(0).PulsanteID = 1
+SelectedControls(0).PulsantePos = TxtLeft(0).Text
+SelectedControls(0).PulsanteAbilitato = Abilitato(0).Value
+SelectedControls(0).PulsanteVisibile = Check1(0).Value
+SelectedControls(0).PulsanteID = 2
+SelectedControls(0).PulsantePos = TxtLeft(1).Text
+SelectedControls(0).PulsanteAbilitato = Abilitato(1).Value
+SelectedControls(0).PulsanteVisibile = Check1(1).Value
+SelectedControls(0).PulsanteID = 3
+SelectedControls(0).PulsantePos = TxtLeft(2).Text
+SelectedControls(0).PulsanteAbilitato = Abilitato(2).Value
+SelectedControls(0).PulsanteVisibile = Check1(2).Value
+SelectedControls(0).PulsanteID = 4
+SelectedControls(0).PulsantePos = TxtLeft(3).Text
+SelectedControls(0).PulsanteAbilitato = Abilitato(3).Value
+SelectedControls(0).PulsanteVisibile = Check1(3).Value
+SelectedControls(0).PulsanteID = 5
+SelectedControls(0).PulsantePos = TxtLeft(4).Text
+SelectedControls(0).PulsanteAbilitato = Abilitato(4).Value
+SelectedControls(0).PulsanteVisibile = Check1(4).Value
+SelectedControls(0).PulsanteID = 6
+SelectedControls(0).PulsantePos = TxtLeft(5).Text
+SelectedControls(0).PulsanteAbilitato = Abilitato(5).Value
+SelectedControls(0).PulsanteVisibile = Check1(5).Value
+SelectedControls(0).PulsanteID = 7
+SelectedControls(0).PulsantePos = TxtLeft(6).Text
+SelectedControls(0).PulsanteAbilitato = Abilitato(6).Value
+SelectedControls(0).PulsanteVisibile = Check1(6).Value
+SelectedControls(0).PulsanteID = 8
+SelectedControls(0).PulsantePos = TxtLeft(7).Text
+SelectedControls(0).PulsanteAbilitato = Abilitato(7).Value
+SelectedControls(0).PulsanteVisibile = Check1(7).Value
+SelectedControls(0).PulsanteID = 9
+SelectedControls(0).PulsantePos = TxtLeft(8).Text
+SelectedControls(0).PulsanteAbilitato = Abilitato(8).Value
+SelectedControls(0).PulsanteVisibile = Check1(8).Value
+SelectedControls(0).PulsanteID = 10
+SelectedControls(0).PulsantePos = TxtLeft(9).Text
+SelectedControls(0).PulsanteAbilitato = Abilitato(9).Value
+SelectedControls(0).PulsanteVisibile = Check1(9).Value
+SelectedControls(0).PulsanteID = 11
+SelectedControls(0).PulsantePos = TxtLeft(10).Text
+SelectedControls(0).PulsanteAbilitato = Abilitato(10).Value
+SelectedControls(0).PulsanteVisibile = Check1(10).Value
+SelectedControls(0).PulsanteID = 12
+SelectedControls(0).PulsantePos = TxtLeft(11).Text
+SelectedControls(0).PulsanteAbilitato = Abilitato(11).Value
+SelectedControls(0).PulsanteVisibile = Check1(11).Value
+End Sub
+
+'EVENTO: legge i settaggi delle proprietà
+
+Private Sub PropertyPage_SelectionChanged()
+
+   SelectedControls(0).PulsanteID = 1
+   TxtLeft(0).Text = SelectedControls(0).PulsantePos
+   Abilitato(0).Value = SelectedControls(0).PulsanteAbilitato
+   Check1(0).Value = SelectedControls(0).PulsanteVisibile
+   SelectedControls(0).PulsanteID = 2
+   TxtLeft(1).Text = SelectedControls(0).PulsantePos
+   Abilitato(1).Value = SelectedControls(0).PulsanteAbilitato
+   Check1(1).Value = SelectedControls(0).PulsanteVisibile
+   SelectedControls(0).PulsanteID = 3
+   TxtLeft(2).Text = SelectedControls(0).PulsantePos
+   Abilitato(2).Value = SelectedControls(0).PulsanteAbilitato
+   Check1(2).Value = SelectedControls(0).PulsanteVisibile
+   SelectedControls(0).PulsanteID = 4
+   TxtLeft(3).Text = SelectedControls(0).PulsantePos
+   Abilitato(3).Value = SelectedControls(0).PulsanteAbilitato
+   Check1(3).Value = SelectedControls(0).PulsanteVisibile
+   SelectedControls(0).PulsanteID = 5
+   TxtLeft(4).Text = SelectedControls(0).PulsantePos
+   Abilitato(4).Value = SelectedControls(0).PulsanteAbilitato
+   Check1(4).Value = SelectedControls(0).PulsanteVisibile
+   SelectedControls(0).PulsanteID = 6
+   TxtLeft(5).Text = SelectedControls(0).PulsantePos
+   Abilitato(5).Value = SelectedControls(0).PulsanteAbilitato
+   Check1(5).Value = SelectedControls(0).PulsanteVisibile
+   SelectedControls(0).PulsanteID = 7
+   TxtLeft(6).Text = SelectedControls(0).PulsantePos
+   Abilitato(6).Value = SelectedControls(0).PulsanteAbilitato
+   Check1(6).Value = SelectedControls(0).PulsanteVisibile
+   SelectedControls(0).PulsanteID = 8
+   TxtLeft(7).Text = SelectedControls(0).PulsantePos
+   Abilitato(7).Value = SelectedControls(0).PulsanteAbilitato
+   Check1(7).Value = SelectedControls(0).PulsanteVisibile
+   SelectedControls(0).PulsanteID = 9
+   TxtLeft(8).Text = SelectedControls(0).PulsantePos
+   Abilitato(8).Value = SelectedControls(0).PulsanteAbilitato
+   Check1(8).Value = SelectedControls(0).PulsanteVisibile
+   SelectedControls(0).PulsanteID = 10
+   TxtLeft(9).Text = SelectedControls(0).PulsantePos
+   Abilitato(9).Value = SelectedControls(0).PulsanteAbilitato
+   Check1(9).Value = SelectedControls(0).PulsanteVisibile
+   SelectedControls(0).PulsanteID = 11
+   TxtLeft(10).Text = SelectedControls(0).PulsantePos
+   Abilitato(10).Value = SelectedControls(0).PulsanteAbilitato
+   Check1(10).Value = SelectedControls(0).PulsanteVisibile
+   SelectedControls(0).PulsanteID = 12
+   TxtLeft(11).Text = SelectedControls(0).PulsantePos
+   Abilitato(11).Value = SelectedControls(0).PulsanteAbilitato
+   Check1(11).Value = SelectedControls(0).PulsanteVisibile
+Changed = False  ' annulla i cambiamenti
+End Sub
+

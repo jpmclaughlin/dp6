@@ -1,0 +1,140 @@
+[Setup Wizard Template]
+TemplateDate=28/01/99 11.43.27
+
+[Progetti e opzioni]
+txtProjFile=C:\Usr\dp4\Sources\dp4.vbp
+chkProjRebuild=0
+optBldSetup=True
+chkIncludeDEP=0
+optInternet=False
+optDEPOnly=False
+
+[Metodo di distribuzione]
+optFloppyTarg=False
+optSingleDirTarg=False
+optMultDirTarg=True
+
+[Directory multiple]
+cboFloppyDrives=0
+cboFloppyDriveSize=0
+txtDirTarget=c:\tmp\
+
+[Pacchetto Internet]
+optRemoteSite=True
+optLocalSite=False
+txtLocalSite=
+
+[Accesso ai dati]
+chkUseJet=1
+chkUseODBC=0
+Isam0=Excel 5.0
+Isam1=Excel 8.0
+Isam2=Excel 3.0
+Isam3=Excel 4.0
+Isam4=Lotus WK1
+Isam5=Lotus WK3
+Isam6=Lotus WK4
+Isam7=Paradox 3.X
+Isam8=Paradox 4.X
+Isam9=Paradox 5.X
+Isam10=Text
+Isam11=HTML Export
+Isam12=HTML Import
+Isam13=dBase III
+Isam14=dBase IV
+Isam15=dBase 5.0
+Isam16=FoxPro 2.0
+Isam17=FoxPro 2.5
+Isam18=FoxPro 2.6
+Isam19=FoxPro 3.0
+Isam20=FoxPro DBC
+Isam21=Jet 2.x
+Isam22=
+Excel 5.0=False
+Excel 8.0=False
+Excel 3.0=False
+Excel 4.0=False
+Lotus WK1=False
+Lotus WK3=False
+Lotus WK4=False
+Paradox 3.X=False
+Paradox 4.X=False
+Paradox 5.X=False
+Text=False
+HTML Export=False
+HTML Import=False
+dBase III=False
+dBase IV=False
+dBase 5.0=False
+FoxPro 2.0=False
+FoxPro 2.5=False
+FoxPro 2.6=False
+FoxPro 3.0=False
+FoxPro DBC=False
+Jet 2.x=False
+
+[Componenti server ActiveX]
+File1=
+
+[Conferma dipendenze]
+File1="C:\WINDOWS\SYSTEM\COMCT232.OCX",True,32764
+File2="C:\WINDOWS\SYSTEM\komfort.dll",True,32762
+File3="C:\WINDOWS\SYSTEM\w95_s7m.dll",True,32762
+File4="C:\WINDOWS\SYSTEM\COMCTL32.OCX",True,32764
+File5="C:\WINDOWS\SYSTEM\DBGRID32.OCX",True,32764
+File6="C:\PROGRAMMI\FILE COMUNI\MICROSOFT SHARED\DAO\DAO350.DLL",True,32763
+File7="C:\WINDOWS\SYSTEM\MSFLXGRD.OCX",True,32764
+File8="C:\WINDOWS\SYSTEM\MSCOMM32.OCX",True,32764
+File9="C:\WINDOWS\SYSTEM\TABCTL32.OCX",True,32764
+File10="C:\WINDOWS\SYSTEM\COMDLG32.OCX",True,32764
+File11=
+
+[Applicazione ActiveX condivisa]
+optDeployApplication=True
+optDeployShared=False
+optRemoteServer1=True
+optRemoteServer0=False
+
+[Riepilogo file]
+File1="C:\WINDOWS\SYSTEM\VB5IT.dll",True,"$(WinSysPath)",,True
+File2="C:\WINDOWS\SYSTEM\MSVBVM50.dll",True,"$(WinSysPathSysFile)",$(DLLSelfRegister),False
+File3="C:\Programmi\DevStudio\VB\SETUPKIT\KITFIL32\SYS32\StdOle2.tlb",True,"$(WinSysPathSysFile)",$(TLBRegister),False
+File4="C:\Programmi\DevStudio\VB\SETUPKIT\KITFIL32\SYS32\OleAut32.dll",True,"$(WinSysPathSysFile)",$(DLLSelfRegister),False
+File5="C:\Programmi\DevStudio\VB\SETUPKIT\KITFIL32\SYS32\OlePro32.dll",True,"$(WinSysPathSysFile)",$(DLLSelfRegister),False
+File6="C:\Programmi\DevStudio\VB\SETUPKIT\KITFIL32\SYS32\AsycFilt.dll",True,"$(WinSysPathSysFile)",,False
+File7="C:\Programmi\DevStudio\VB\SETUPKIT\KITFIL32\SYS32\Ctl3d32.dll",True,"$(WinSysPathSysFile)",,False
+File8="C:\Programmi\DevStudio\VB\SETUPKIT\KITFIL32\SYS32\ComCat.dll",True,"$(WinSysPathSysFile)",$(DLLSelfRegister),False
+File9="C:\WINDOWS\SYSTEM\COMCT232.OCX",True,"$(WinSysPath)",$(DLLSelfRegister),True
+File10="C:\WINDOWS\SYSTEM\CmCt2IT.dll",True,"$(WinSysPath)",,True
+File11="C:\WINDOWS\SYSTEM\komfort.dll",True,"$(WinSysPath)",,True
+File12="C:\WINDOWS\SYSTEM\w95_s7m.dll",True,"$(WinSysPath)",,True
+File13="C:\WINDOWS\SYSTEM\COMCTL32.OCX",True,"$(WinSysPath)",$(DLLSelfRegister),True
+File14="C:\WINDOWS\SYSTEM\CmCtlIT.dll",True,"$(WinSysPath)",,True
+File15="C:\WINDOWS\SYSTEM\DBGRID32.OCX",True,"$(WinSysPath)",$(DLLSelfRegister),True
+File16="C:\WINDOWS\SYSTEM\DBGrdIT.dll",True,"$(WinSysPath)",,True
+File17="C:\PROGRAMMI\FILE COMUNI\MICROSOFT SHARED\DAO\DAO350.DLL",True,"$(MSDAOPath)",$(DLLSelfRegister),True
+File18="C:\WINDOWS\SYSTEM\MSJtEr35.dll",True,"$(WinSysPathSysFile)",,False
+File19="C:\WINDOWS\SYSTEM\MSJInt35.dll",True,"$(WinSysPathSysFile)",,False
+File20="C:\Programmi\DevStudio\VB\SETUPKIT\KITFIL32\SYS32\MSVCRT40.dll",True,"$(WinSysPathSysFile)",,False
+File21="C:\WINDOWS\SYSTEM\MSFLXGRD.OCX",True,"$(WinSysPath)",$(DLLSelfRegister),True
+File22="C:\WINDOWS\SYSTEM\FlxGdIT.dll",True,"$(WinSysPath)",,True
+File23="C:\WINDOWS\SYSTEM\MSCOMM32.OCX",True,"$(WinSysPath)",$(DLLSelfRegister),True
+File24="C:\WINDOWS\SYSTEM\MSComIT.dll",True,"$(WinSysPath)",,True
+File25="C:\WINDOWS\SYSTEM\TABCTL32.OCX",True,"$(WinSysPath)",$(DLLSelfRegister),True
+File26="C:\WINDOWS\SYSTEM\TabCtIT.dll",True,"$(WinSysPath)",,True
+File27="C:\WINDOWS\SYSTEM\COMDLG32.OCX",True,"$(WinSysPath)",$(DLLSelfRegister),True
+File28="C:\WINDOWS\SYSTEM\CmDlgIT.dll",True,"$(WinSysPath)",,True
+File29="C:\WINDOWS\SYSTEM\MSJet35.dll",True,"$(WinSysPathSysFile)",$(DLLSelfRegister),False
+File30="C:\WINDOWS\SYSTEM\VBAJet32.dll",True,"$(WinSysPathSysFile)",,False
+File31="C:\WINDOWS\SYSTEM\VB5DB.dll",True,"$(WinSysPath)",,True
+File32="C:\WINDOWS\SYSTEM\MSRD2x35.dll",True,"$(WinSysPathSysFile)",$(DLLSelfRegister),False
+File33="C:\WINDOWS\SYSTEM\MsRepl35.dll",True,"$(WinSysPathSysFile)",,False
+File34="C:\WINDOWS\SYSTEM\ODBCJt32.dll",True,"$(WinSysPathSysFile)",,False
+File35="C:\WINDOWS\SYSTEM\ODBCJI32.dll",True,"$(WinSysPathSysFile)",,False
+File36="C:\WINDOWS\SYSTEM\ODBCTL32.dll",True,"$(WinSysPathSysFile)",,False
+File37="C:\Usr\dp4\Target\dp4.exe",True,"$(AppPath)",,False
+File38="C:\Usr\dp4\Target\Alarms.mdb",True,"$(AppPath)",,False
+File39="C:\Usr\dp4\Target\log.mdb",True,"$(AppPath)",,False
+File40="C:\Usr\dp4\Target\parameters.mdb",True,"$(AppPath)",,False
+File41="C:\Usr\dp4\Target\plc.mdb",True,"$(AppPath)",,False
+File42="C:\Usr\dp4\Target\Production.mdb",True,"$(AppPath)",,False

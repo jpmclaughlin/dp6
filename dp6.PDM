@@ -1,0 +1,598 @@
+[Root]
+Most Recent Package=Pacchetto di installazione standard 1
+
+[Package|Pacchetto di installazione standard 1|IconGroups]
+Group0=dp4
+PrivateGroup0=Vero
+Parent0=$(Programs)
+
+[Package|Pacchetto di installazione standard 1|dp4]
+Icon1=dp4.exe
+Title1=dp4
+StartIn1=$(AppPath)
+Key1=Icon1
+
+
+[Package|Pacchetto di installazione DP4.1|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=C:\tmp\dp4
+
+[Package|Pacchetto di installazione DP4.1|Configure DAO ISAMs]
+Applicable=Yes
+Jet 2.x=No
+
+[Package|Pacchetto di installazione DP4.1|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Pacchetto di installazione DP4.1|Files Found]
+
+[Package|Pacchetto di installazione DP4.1|Files Released]
+
+[Package|Pacchetto di installazione DP4.1|Missing Dependency Information]
+C:\WINDOWS\SYSTEM\W95_S7M.DLL=
+C:\WINDOWS\SYSTEM\KOMFORT.DLL=
+C:\Programmi\File comuni\SYSTEM\ADO\MSADO20.TLB=
+
+[Package|Pacchetto di installazione DP4.1|Out-of-Date Dependency Information]
+C:\WINDOWS\SYSTEM\mscomctl.ocx=
+C:\WINDOWS\SYSTEM\TABCTL32.OCX=
+
+[Package|Pacchetto di installazione DP4.1|Files Added]
+
+[Package|Pacchetto di installazione DP4.1|Files Removed]
+c:\usr\dp4_1\target\dp4.exe=
+
+[Package|Pacchetto di installazione DP4.1|Files In Project]
+C:\WINDOWS\SYSTEM\MSVBVM60.DLL=Yes
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\WINDOWS\SYSTEM\VB6IT.DLL=Yes
+C:\WINDOWS\SYSTEM\KOMFORT.DLL=Yes
+C:\WINDOWS\SYSTEM\W95_S7M.DLL=Yes
+C:\WINDOWS\SYSTEM\DBGRID32.OCX=Yes
+C:\WINDOWS\SYSTEM\DBGRDIT.DLL=Yes
+C:\Programmi\File comuni\Microsoft Shared\DAO\DAO350.DLL=Yes
+C:\WINDOWS\SYSTEM\msjet35.dll=Yes
+C:\WINDOWS\SYSTEM\msjter35.dll=Yes
+C:\WINDOWS\SYSTEM\msjint35.dll=Yes
+C:\WINDOWS\SYSTEM\VBAJET32.DLL=Yes
+C:\WINDOWS\SYSTEM\EXPSRV.DLL=Yes
+C:\WINDOWS\SYSTEM\msrd2x35.dll=Yes
+C:\WINDOWS\SYSTEM\msrepl35.dll=Yes
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MSVCRT40.DLL=Yes
+C:\WINDOWS\SYSTEM\VB5DB.DLL=Yes
+C:\WINDOWS\SYSTEM\Mscomm32.ocx=Yes
+C:\WINDOWS\SYSTEM\MSCOMIT.DLL=Yes
+C:\WINDOWS\SYSTEM\TABCTL32.OCX=Yes
+C:\WINDOWS\SYSTEM\TABCTIT.DLL=Yes
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\WINDOWS\SYSTEM\VB6STKIT.DLL=Yes
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+C:\WINDOWS\SYSTEM\MSDATGRD.OCX=Yes
+C:\WINDOWS\SYSTEM\MSSTDFMT.DLL=Yes
+C:\WINDOWS\SYSTEM\STDFTIT.DLL=Yes
+C:\WINDOWS\SYSTEM\DATGDIT.DLL=Yes
+C:\WINDOWS\SYSTEM\MSADODC.OCX=Yes
+C:\WINDOWS\SYSTEM\ADODCIT.DLL=Yes
+C:\WINDOWS\SYSTEM\mscomctl.ocx=Yes
+C:\WINDOWS\SYSTEM\MSCMCIT.DLL=Yes
+C:\WINDOWS\SYSTEM\MSBIND.DLL=Yes
+C:\Usr\dp4_3_LAT.pc\target\dp4.exe=Yes
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=Yes
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=Yes
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=Yes
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=Yes
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=Yes
+
+[Package|Pacchetto di installazione DP4.1|Configure Registry Files]
+Applicable=No
+
+[Package|Pacchetto di installazione DP4.1|Configure Remote Servers]
+Applicable=No
+
+[Package|Pacchetto di installazione DP4.1|Install Locations]
+C:\Usr\Dp4_1\Target\dp4.exe=$(AppPath)
+C:\WINDOWS\SYSTEM\MSVBVM60.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\olepro32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\VB6IT.DLL=$(WinSysPath)
+C:\WINDOWS\SYSTEM\KOMFORT.DLL=$(WinSysPath)
+C:\WINDOWS\SYSTEM\W95_S7M.DLL=$(WinSysPath)
+C:\WINDOWS\SYSTEM\COMCT232.OCX=$(WinSysPath)
+C:\WINDOWS\SYSTEM\CMCT2IT.DLL=$(WinSysPath)
+C:\WINDOWS\SYSTEM\Comctl32.ocx=$(WinSysPath)
+C:\WINDOWS\SYSTEM\CMCTLIT.DLL=$(WinSysPath)
+C:\WINDOWS\SYSTEM\DBGRID32.OCX=$(WinSysPath)
+C:\WINDOWS\SYSTEM\DBGRDIT.DLL=$(WinSysPath)
+C:\Programmi\File comuni\Microsoft Shared\DAO\DAO350.DLL=$(MSDAOPath)
+C:\WINDOWS\SYSTEM\msjet35.dll=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\msjter35.dll=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\msjint35.dll=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\VBAJET32.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\EXPSRV.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\msrd2x35.dll=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\msrepl35.dll=$(WinSysPathSysFile)
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MSVCRT40.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\VB5DB.DLL=$(WinSysPath)
+C:\WINDOWS\SYSTEM\MSFLXGRD.OCX=$(WinSysPath)
+C:\WINDOWS\SYSTEM\FLXGDIT.DLL=$(WinSysPath)
+C:\WINDOWS\SYSTEM\Mscomm32.ocx=$(WinSysPath)
+C:\WINDOWS\SYSTEM\MSCOMIT.DLL=$(WinSysPath)
+C:\WINDOWS\SYSTEM\TABCTL32.OCX=$(WinSysPath)
+C:\WINDOWS\SYSTEM\TABCTIT.DLL=$(WinSysPath)
+C:\WINDOWS\SYSTEM\comdlg32.ocx=$(WinSysPath)
+C:\WINDOWS\SYSTEM\CMDLGIT.DLL=$(WinSysPath)
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINDOWS\SYSTEM\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+C:\usr\2118.dp4\target\dp4.exe=$(AppPath)
+C:\WINDOWS\SYSTEM\MSDATGRD.OCX=$(WinSysPath)
+C:\WINDOWS\SYSTEM\MSSTDFMT.DLL=$(WinSysPath)
+C:\WINDOWS\SYSTEM\STDFTIT.DLL=$(WinSysPath)
+C:\WINDOWS\SYSTEM\DATGDIT.DLL=$(WinSysPath)
+C:\WINDOWS\SYSTEM\MSADODC.OCX=$(WinSysPath)
+C:\WINDOWS\SYSTEM\ADODCIT.DLL=$(WinSysPath)
+C:\WINDOWS\SYSTEM\mscomctl.ocx=$(WinSysPath)
+C:\WINDOWS\SYSTEM\MSCMCIT.DLL=$(WinSysPath)
+C:\Programmi\File comuni\SYSTEM\ADO\MSADO20.TLB=$(WinSysPath)
+C:\WINDOWS\SYSTEM\MSBIND.DLL=$(WinSysPath)
+C:\Usr\dp4_3_LAT.pc\target\dp4.exe=$(AppPath)
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=$(AppPath)
+
+[Package|Pacchetto di installazione DP4.1|Configure Shared Files]
+Applicable=Yes
+C:\Usr\Dp4_1\Target\dp4.exe=No
+C:\usr\2118.dp4\target\dp4.exe=No
+C:\Usr\dp4_3_LAT.pc\target\dp4.exe=Yes
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=Yes
+
+[Package|Pacchetto di installazione DP4.1|Distribution]
+Type=multi
+Size=1.44 MB
+Title=Datapack
+
+[Package|Pacchetto di installazione DP4.1|IconGroups]
+Group0=dp4.1
+PrivateGroup0=0
+Parent0=$(Programs)
+
+[Package|Pacchetto di installazione DP4.1|dp4.1]
+Icon1=dp4.exe
+Title1=dp4.1
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|Pacchetto di installazione DP4.1|Package]
+PackageFolder=C:\tmp\dp4
+ProjectFolder=C:\Usr\dp4_3_LAT.pc\sources
+ServerSideCab=
+File1=C:\tmp\dp4\setup.exe
+File2=C:\tmp\dp4\Setup.Lst
+File3=C:\tmp\dp4\dp41.CAB
+File4=C:\tmp\dp4\dp42.CAB
+File5=C:\tmp\dp4\dp43.CAB
+File6=C:\tmp\dp4\dp44.CAB
+File7=C:\tmp\dp4\dp45.CAB
+File8=C:\tmp\dp4\dp46.CAB
+File9=C:\tmp\dp4\dp47.CAB
+File10=C:\tmp\dp4\dp48.CAB
+File11=C:\tmp\dp4\dp49.CAB
+Handler1=PDWizard.FloppyDplySubWiz
+Handler2=PDWizard.FolderDplySubWiz
+Handler3=PDWizard.WebPostDplySubWiz
+
+[Package|Pacchetto di installazione standard 2|IconGroups]
+Group0=dp6
+PrivateGroup0=-1
+Parent0=$(Programs)
+
+[Package|Pacchetto di installazione standard 2|dp6]
+Icon1=dp6.exe
+Title1=dp6
+StartIn1=$(AppPath)
+Key1=Icon1
+
+
+[Package|Pacchetto di installazione standard 2|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=C:\Documents and Settings\Administrator\Desktop\installazione
+
+[Package|Pacchetto di installazione standard 2|Configure DAO ISAMs]
+Applicable=Yes
+Jet 2.x=No
+Xbase=No
+Excel=No
+Exchange=No
+Text=No
+Lotus=No
+Paradox=No
+
+[Package|Pacchetto di installazione standard 2|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Pacchetto di installazione standard 2|Files Found]
+
+[Package|Pacchetto di installazione standard 2|Files Released]
+uxtheme.dll=
+
+[Package|Pacchetto di installazione standard 2|Missing Dependency Information]
+C:\Programmi\File comuni\System\ado\msjro.dll=
+C:\Programmi\File comuni\System\ado\msado25.tlb=
+C:\WINNT\system32\w95_s7m.dll=
+C:\WINNT\system32\Komfort.dll=
+C:\SIEMENS\COMMON\OPC\SOPCDAAuto.dll=
+C:\WINNT\system32\msderun.dll=
+C:\WINNT\system32\msimg32.dll=
+
+[Package|Pacchetto di installazione standard 2|Out-of-Date Dependency Information]
+C:\WINNT\system32\MSCAL.OCX=
+
+[Package|Pacchetto di installazione standard 2|Files Added]
+
+[Package|Pacchetto di installazione standard 2|Files Removed]
+
+[Package|Pacchetto di installazione standard 2|Files In Project]
+C:\WINNT\system32\msvbvm60.dll=Yes
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=Yes
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=Yes
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=Yes
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=Yes
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\WINNT\system32\VB6IT.DLL=Yes
+C:\Programmi\File comuni\Microsoft Shared\DAO\DAO350.DLL=Yes
+C:\WINNT\system32\MSJET35.DLL=Yes
+C:\WINNT\system32\MSJTER35.DLL=Yes
+C:\WINNT\system32\MSJINT35.DLL=Yes
+C:\WINNT\system32\vbajet32.dll=Yes
+C:\WINNT\system32\expsrv.dll=Yes
+C:\WINNT\system32\MSRD2X35.DLL=Yes
+C:\WINNT\system32\MSREPL35.DLL=Yes
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MSVCRT40.DLL=Yes
+C:\WINNT\system32\VB5DB.DLL=Yes
+C:\Programmi\File comuni\System\ado\msado25.tlb=Yes
+C:\WINNT\system32\MSBIND.DLL=Yes
+C:\WINNT\system32\MSSTDFMT.DLL=Yes
+C:\WINNT\system32\STDFTIT.DLL=Yes
+C:\WINNT\system32\DBGRID32.OCX=Yes
+C:\WINNT\system32\DBGRDIT.DLL=Yes
+C:\WINNT\system32\MSCOMM32.OCX=Yes
+C:\WINNT\system32\MSCOMIT.DLL=Yes
+C:\WINNT\system32\TABCTL32.OCX=Yes
+C:\WINNT\system32\TABCTIT.DLL=Yes
+C:\WINNT\system32\MSDATGRD.OCX=Yes
+C:\WINNT\system32\DATGDIT.DLL=Yes
+C:\WINNT\system32\MSADODC.OCX=Yes
+C:\WINNT\system32\ADODCIT.DLL=Yes
+C:\WINNT\system32\MSCOMCTL.OCX=Yes
+C:\WINNT\system32\MSCMCIT.DLL=Yes
+C:\WINNT\system32\Mscomct2.ocx=Yes
+C:\WINNT\system32\MSCC2IT.DLL=Yes
+C:\WINNT\system32\MSHFLXGD.OCX=Yes
+C:\WINNT\system32\MSHFGIT.DLL=Yes
+C:\WINNT\system32\MSCAL.OCX=Yes
+C:\WINNT\system32\COMDLG32.OCX=Yes
+C:\WINNT\system32\CMDLGIT.DLL=Yes
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\WINNT\system32\VB6STKIT.DLL=Yes
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+C:\Documents and Settings\Administrator\Desktop\DEMO134\Sources\dp6.exe=Yes
+C:\WINNT\system32\msvbvm50.dll=Yes
+C:\WINNT\system32\msimg32.dll=Yes
+C:\WINNT\system32\msderun.dll=Yes
+C:\WINNT\system32\MSDBRPTR.DLL=Yes
+C:\WINNT\system32\DBRPRIT.DLL=Yes
+C:\SIEMENS\COMMON\OPC\SOPCDAAuto.dll=Yes
+C:\WINNT\system32\MSCHRT20.OCX=Yes
+C:\WINNT\system32\MSCH2IT.DLL=Yes
+
+[Package|Pacchetto di installazione standard 2|Configure Registry Files]
+Applicable=No
+
+[Package|Pacchetto di installazione standard 2|Configure Remote Servers]
+Applicable=No
+
+[Package|Pacchetto di installazione standard 2|Install Locations]
+C:\Innologic\Progetti\Mair\2232\target\dp6.exe=$(AppPath)
+C:\WINNT\system32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINNT\system32\VB6IT.DLL=$(WinSysPath)
+C:\WINNT\system32\Komfort.dll=$(WinSysPath)
+C:\WINNT\system32\w95_s7m.dll=$(WinSysPath)
+C:\Programmi\File comuni\Microsoft Shared\DAO\DAO350.DLL=$(MSDAOPath)
+C:\WINNT\system32\MSJET35.DLL=$(WinSysPathSysFile)
+C:\WINNT\system32\MSJTER35.DLL=$(WinSysPathSysFile)
+C:\WINNT\system32\MSJINT35.DLL=$(WinSysPathSysFile)
+C:\WINNT\system32\vbajet32.dll=$(WinSysPathSysFile)
+C:\WINNT\system32\expsrv.dll=$(WinSysPathSysFile)
+C:\WINNT\system32\MSRD2X35.DLL=$(WinSysPathSysFile)
+C:\WINNT\system32\MSREPL35.DLL=$(WinSysPathSysFile)
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MSVCRT40.DLL=$(WinSysPathSysFile)
+C:\WINNT\system32\VB5DB.DLL=$(WinSysPath)
+C:\Programmi\File comuni\System\ado\msado25.tlb=$(WinSysPath)
+C:\WINNT\system32\MSBIND.DLL=$(WinSysPath)
+C:\WINNT\system32\MSSTDFMT.DLL=$(WinSysPath)
+C:\WINNT\system32\STDFTIT.DLL=$(WinSysPath)
+C:\Programmi\File comuni\System\ado\msjro.dll=$(WinSysPath)
+C:\WINNT\system32\DBGRID32.OCX=$(WinSysPath)
+C:\WINNT\system32\DBGRDIT.DLL=$(WinSysPath)
+C:\WINNT\system32\MSCOMM32.OCX=$(WinSysPath)
+C:\WINNT\system32\MSCOMIT.DLL=$(WinSysPath)
+C:\WINNT\system32\TABCTL32.OCX=$(WinSysPath)
+C:\WINNT\system32\TABCTIT.DLL=$(WinSysPath)
+C:\WINNT\system32\MSDATGRD.OCX=$(WinSysPath)
+C:\WINNT\system32\DATGDIT.DLL=$(WinSysPath)
+C:\WINNT\system32\MSADODC.OCX=$(WinSysPath)
+C:\WINNT\system32\ADODCIT.DLL=$(WinSysPath)
+C:\WINNT\system32\MSCOMCTL.OCX=$(WinSysPath)
+C:\WINNT\system32\MSCMCIT.DLL=$(WinSysPath)
+C:\WINNT\system32\Mscomct2.ocx=$(WinSysPath)
+C:\WINNT\system32\MSCC2IT.DLL=$(WinSysPath)
+C:\WINNT\system32\MSHFLXGD.OCX=$(WinSysPath)
+C:\WINNT\system32\MSHFGIT.DLL=$(WinSysPath)
+C:\WINNT\system32\MSCAL.OCX=$(WinSysPath)
+C:\WINNT\system32\COMDLG32.OCX=$(WinSysPath)
+C:\WINNT\system32\CMDLGIT.DLL=$(WinSysPath)
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINNT\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+C:\Documents and Settings\Administrator\Desktop\DEMO134\Sources\dp6.exe=$(AppPath)
+C:\WINNT\system32\msvbvm50.dll=$(WinSysPathSysFile)
+C:\WINNT\system32\msimg32.dll=$(WinSysPath)
+C:\WINNT\system32\msderun.dll=$(WinSysPath)
+C:\WINNT\system32\MSDBRPTR.DLL=$(WinSysPath)
+C:\WINNT\system32\DBRPRIT.DLL=$(WinSysPath)
+C:\SIEMENS\COMMON\OPC\SOPCDAAuto.dll=$(WinSysPath)
+C:\WINNT\system32\MSCHRT20.OCX=$(WinSysPath)
+C:\WINNT\system32\MSCH2IT.DLL=$(WinSysPath)
+
+[Package|Pacchetto di installazione standard 2|Configure Shared Files]
+Applicable=Yes
+C:\Innologic\Progetti\Mair\2232\target\dp6.exe=No
+C:\Documents and Settings\Administrator\Desktop\DEMO134\Sources\dp6.exe=No
+
+[Package|Pacchetto di installazione standard 2|Distribution]
+Type=single
+Size=
+Title=dp6
+
+[Package|Pacchetto di installazione standard 2|Package]
+PackageFolder=C:\Documents and Settings\Administrator\Desktop\installazione
+ProjectFolder=C:\Documents and Settings\Administrator\Desktop\DEMO134\Sources
+ServerSideCab=
+File1=C:\Documents and Settings\Administrator\Desktop\installazione\setup.exe
+File2=C:\Documents and Settings\Administrator\Desktop\installazione\Setup.Lst
+File3=C:\Documents and Settings\Administrator\Desktop\installazione\dp6.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+
+[Package|Pacchetto di installazione standard 1|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=C:\Documents and Settings\Administrator\Desktop\installazione
+
+[Package|Pacchetto di installazione standard 1|Configure DAO ISAMs]
+Applicable=Yes
+Text=No
+Excel=No
+Lotus=No
+Xbase=No
+Paradox=No
+Jet 2.x=Yes
+Exchange=No
+
+[Package|Pacchetto di installazione standard 1|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Pacchetto di installazione standard 1|Files Found]
+uxtheme.dll=C:\Documents and Settings\Administrator\Desktop\UxThemePack\SP1\uxtheme.dll
+
+[Package|Pacchetto di installazione standard 1|Files Released]
+
+[Package|Pacchetto di installazione standard 1|Missing Dependency Information]
+C:\WINDOWS\SYSTEM\W95_S7M.DLL=
+C:\WINDOWS\SYSTEM\KOMFORT.DLL=
+C:\Documents and Settings\Administrator\Desktop\UxThemePack\SP1\uxtheme.dll=
+C:\SIEMENS\COMMON\OPC\SOPCDAAuto.dll=
+C:\WINNT\system32\msderun.dll=
+C:\Programmi\File comuni\System\ado\msado25.tlb=
+C:\WINNT\system32\msimg32.dll=
+C:\WINNT\system32\sopcdaauto.dll=
+C:\WINNT\system32\uxtheme.dll=
+
+[Package|Pacchetto di installazione standard 1|Out-of-Date Dependency Information]
+C:\WINNT\system32\MSCAL.OCX=
+
+[Package|Pacchetto di installazione standard 1|Files Added]
+
+[Package|Pacchetto di installazione standard 1|Files Removed]
+c:\winnt\system32\mscal.ocx=
+c:\winnt\system32\uxtheme.dll=
+
+[Package|Pacchetto di installazione standard 1|Files In Project]
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\Programmi\File comuni\Microsoft Shared\DAO\DAO350.DLL=Yes
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MSVCRT40.DLL=Yes
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+C:\Documents and Settings\Administrator\Desktop\DEMO134\Sources\dp6.exe=Yes
+C:\WINNT\system32\MSVBVM60.DLL=Yes
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=Yes
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=Yes
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=Yes
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=Yes
+C:\WINNT\system32\VB6IT.DLL=Yes
+C:\WINNT\system32\msvbvm50.dll=Yes
+C:\WINNT\system32\msimg32.dll=Yes
+C:\WINNT\system32\msjet35.dll=Yes
+C:\WINNT\system32\msjter35.dll=Yes
+C:\WINNT\system32\msjint35.dll=Yes
+C:\WINNT\system32\vbajet32.dll=Yes
+C:\WINNT\system32\expsrv.dll=Yes
+C:\WINNT\system32\msrd2x35.dll=Yes
+C:\WINNT\system32\MSREPL35.DLL=Yes
+C:\WINNT\system32\VB5DB.DLL=Yes
+C:\Programmi\File comuni\System\ado\msado25.tlb=Yes
+C:\WINNT\system32\MSBIND.DLL=Yes
+C:\WINNT\system32\MSSTDFMT.DLL=Yes
+C:\WINNT\system32\STDFTIT.DLL=Yes
+C:\WINNT\system32\msderun.dll=Yes
+C:\WINNT\system32\MSDBRPTR.DLL=Yes
+C:\WINNT\system32\DBRPRIT.DLL=Yes
+C:\WINNT\system32\DBGRID32.OCX=Yes
+C:\WINNT\system32\DBGRDIT.DLL=Yes
+C:\WINNT\system32\MSCOMM32.OCX=Yes
+C:\WINNT\system32\MSCOMIT.DLL=Yes
+C:\WINNT\system32\TABCTL32.OCX=Yes
+C:\WINNT\system32\TABCTIT.DLL=Yes
+C:\WINNT\system32\MSDATGRD.OCX=Yes
+C:\WINNT\system32\DATGDIT.DLL=Yes
+C:\WINNT\system32\MSADODC.OCX=Yes
+C:\WINNT\system32\ADODCIT.DLL=Yes
+C:\WINNT\system32\MSCOMCTL.OCX=Yes
+C:\WINNT\system32\MSCMCIT.DLL=Yes
+C:\WINNT\system32\MSCOMCT2.OCX=Yes
+C:\WINNT\system32\MSCC2IT.DLL=Yes
+C:\WINNT\system32\MSHFLXGD.OCX=Yes
+C:\WINNT\system32\MSHFGIT.DLL=Yes
+C:\WINNT\system32\MSCAL.OCX=No
+C:\WINNT\system32\COMDLG32.OCX=Yes
+C:\WINNT\system32\CMDLGIT.DLL=Yes
+C:\WINNT\system32\MSCHRT20.OCX=Yes
+C:\WINNT\system32\MSCH2IT.DLL=Yes
+C:\WINNT\system32\VB6STKIT.DLL=Yes
+C:\WINNT\system32\uxtheme.dll=No
+C:\WINNT\system32\sopcdaauto.dll=Yes
+
+[Package|Pacchetto di installazione standard 1|Configure Registry Files]
+Applicable=No
+
+[Package|Pacchetto di installazione standard 1|Configure Remote Servers]
+Applicable=No
+
+[Package|Pacchetto di installazione standard 1|Install Locations]
+C:\Usr\Dp4_1\Target\dp4.exe=$(AppPath)
+C:\WINDOWS\SYSTEM\MSVBVM60.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\olepro32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\VB6IT.DLL=$(WinSysPath)
+C:\WINDOWS\SYSTEM\KOMFORT.DLL=$(WinSysPath)
+C:\WINDOWS\SYSTEM\W95_S7M.DLL=$(WinSysPath)
+C:\WINDOWS\SYSTEM\COMCT232.OCX=$(WinSysPath)
+C:\WINDOWS\SYSTEM\CMCT2IT.DLL=$(WinSysPath)
+C:\WINDOWS\SYSTEM\Comctl32.ocx=$(WinSysPath)
+C:\WINDOWS\SYSTEM\CMCTLIT.DLL=$(WinSysPath)
+C:\WINDOWS\SYSTEM\DBGRID32.OCX=$(WinSysPath)
+C:\WINDOWS\SYSTEM\DBGRDIT.DLL=$(WinSysPath)
+C:\Programmi\File comuni\Microsoft Shared\DAO\DAO350.DLL=$(MSDAOPath)
+C:\WINDOWS\SYSTEM\msjet35.dll=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\msjter35.dll=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\msjint35.dll=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\VBAJET32.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\EXPSRV.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\msrd2x35.dll=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\msrepl35.dll=$(WinSysPathSysFile)
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MSVCRT40.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\SYSTEM\VB5DB.DLL=$(WinSysPath)
+C:\WINDOWS\SYSTEM\MSFLXGRD.OCX=$(WinSysPath)
+C:\WINDOWS\SYSTEM\FLXGDIT.DLL=$(WinSysPath)
+C:\WINDOWS\SYSTEM\Mscomm32.ocx=$(WinSysPath)
+C:\WINDOWS\SYSTEM\MSCOMIT.DLL=$(WinSysPath)
+C:\WINDOWS\SYSTEM\TABCTL32.OCX=$(WinSysPath)
+C:\WINDOWS\SYSTEM\TABCTIT.DLL=$(WinSysPath)
+C:\WINDOWS\SYSTEM\comdlg32.ocx=$(WinSysPath)
+C:\WINDOWS\SYSTEM\CMDLGIT.DLL=$(WinSysPath)
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINDOWS\SYSTEM\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+C:\Documents and Settings\Administrator\Desktop\DEMO134\Sources\dp6.exe=$(AppPath)
+C:\WINNT\system32\MSVBVM60.DLL=$(WinSysPathSysFile)
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\Programmi\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\WINNT\system32\VB6IT.DLL=$(WinSysPath)
+C:\WINNT\system32\msvbvm50.dll=$(WinSysPathSysFile)
+C:\WINNT\system32\msimg32.dll=$(WinSysPath)
+C:\Documents and Settings\Administrator\Desktop\UxThemePack\SP1\uxtheme.dll=$(WinSysPath)
+C:\WINNT\system32\msjet35.dll=$(WinSysPathSysFile)
+C:\WINNT\system32\msjter35.dll=$(WinSysPathSysFile)
+C:\WINNT\system32\msjint35.dll=$(WinSysPathSysFile)
+C:\WINNT\system32\vbajet32.dll=$(WinSysPathSysFile)
+C:\WINNT\system32\expsrv.dll=$(WinSysPathSysFile)
+C:\WINNT\system32\msrd2x35.dll=$(WinSysPathSysFile)
+C:\WINNT\system32\MSREPL35.DLL=$(WinSysPathSysFile)
+C:\WINNT\system32\VB5DB.DLL=$(WinSysPath)
+C:\Programmi\File comuni\System\ado\msado25.tlb=$(WinSysPath)
+C:\WINNT\system32\MSBIND.DLL=$(WinSysPath)
+C:\WINNT\system32\MSSTDFMT.DLL=$(WinSysPath)
+C:\WINNT\system32\STDFTIT.DLL=$(WinSysPath)
+C:\WINNT\system32\msderun.dll=$(WinSysPath)
+C:\WINNT\system32\MSDBRPTR.DLL=$(WinSysPath)
+C:\WINNT\system32\DBRPRIT.DLL=$(WinSysPath)
+C:\SIEMENS\COMMON\OPC\SOPCDAAuto.dll=$(WinSysPath)
+C:\WINNT\system32\DBGRID32.OCX=$(WinSysPath)
+C:\WINNT\system32\DBGRDIT.DLL=$(WinSysPath)
+C:\WINNT\system32\MSCOMM32.OCX=$(WinSysPath)
+C:\WINNT\system32\MSCOMIT.DLL=$(WinSysPath)
+C:\WINNT\system32\TABCTL32.OCX=$(WinSysPath)
+C:\WINNT\system32\TABCTIT.DLL=$(WinSysPath)
+C:\WINNT\system32\MSDATGRD.OCX=$(WinSysPath)
+C:\WINNT\system32\DATGDIT.DLL=$(WinSysPath)
+C:\WINNT\system32\MSADODC.OCX=$(WinSysPath)
+C:\WINNT\system32\ADODCIT.DLL=$(WinSysPath)
+C:\WINNT\system32\MSCOMCTL.OCX=$(WinSysPath)
+C:\WINNT\system32\MSCMCIT.DLL=$(WinSysPath)
+C:\WINNT\system32\MSCOMCT2.OCX=$(WinSysPath)
+C:\WINNT\system32\MSCC2IT.DLL=$(WinSysPath)
+C:\WINNT\system32\MSHFLXGD.OCX=$(WinSysPath)
+C:\WINNT\system32\MSHFGIT.DLL=$(WinSysPath)
+C:\WINNT\system32\MSCAL.OCX=$(WinSysPath)
+C:\WINNT\system32\COMDLG32.OCX=$(WinSysPath)
+C:\WINNT\system32\CMDLGIT.DLL=$(WinSysPath)
+C:\WINNT\system32\MSCHRT20.OCX=$(WinSysPath)
+C:\WINNT\system32\MSCH2IT.DLL=$(WinSysPath)
+C:\WINNT\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\WINNT\system32\uxtheme.dll=$(WinSysPath)
+C:\WINNT\system32\sopcdaauto.dll=$(WinSysPath)
+
+[Package|Pacchetto di installazione standard 1|Configure Shared Files]
+Applicable=Yes
+C:\Usr\Dp4_1\Target\dp4.exe=No
+C:\Documents and Settings\Administrator\Desktop\DEMO134\Sources\dp6.exe=No
+
+[Package|Pacchetto di installazione standard 1|Distribution]
+Type=single
+Size=1.44 MB
+Title=dp6
+
+[Package|Pacchetto di installazione standard 1|Package]
+PackageFolder=C:\Documents and Settings\Administrator\Desktop\installazione
+ProjectFolder=C:\Documents and Settings\Administrator\Desktop\DEMO134\Sources
+ServerSideCab=
+File1=C:\Documents and Settings\Administrator\Desktop\installazione\setup.exe
+File2=C:\Documents and Settings\Administrator\Desktop\installazione\Setup.Lst
+File3=C:\Documents and Settings\Administrator\Desktop\installazione\dp6.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz

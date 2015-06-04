@@ -1,0 +1,3 @@
+Riga 126: la classe MSDBGrid.DBGrid del controllo OrdersLogDBGrid non era una classe di controllo caricata.
+Riga 127: il nome della proprietà Bindings in OrdersLogDBGrid non è valido.
+Riga 130: il nome della proprietà OleObjectBlob in OrdersLogDBGrid non è valido.
