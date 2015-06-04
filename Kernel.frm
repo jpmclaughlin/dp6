@@ -1,5 +1,5 @@
 VERSION 5.00
-Object = "{67397AA1-7FB1-11D0-B148-00A0C922E820}#6.0#0"; "msadodc.ocx"
+Object = "{67397AA1-7FB1-11D0-B148-00A0C922E820}#6.0#0"; "MSADODC.OCX"
 Begin VB.Form frmKernel 
    BorderStyle     =   0  'None
    Caption         =   "frmKERNEL"
@@ -923,7 +923,37 @@ Private Sub Timer1_Timer()
 Dim LogOK As Boolean
 Static oneShot As Boolean
         
-        Call Kernel
+        
+        '============ PARTE NUOVA COMUNICAZIONE ============
+          Static tentativo As Boolean
+          Static suiteDone As Boolean
+          
+          If lib.ComunicationStarted = False And tentativo = False Then
+        
+              lib.warningsOn = False
+              lib.ConnectionMsgOff = False
+              lib.Auto_timerRequire = False
+              lib.INIT_component "C:\MAIR\DP6 2309\Target\Client_SETUP.csv"
+              
+              tentativo = True
+          End If
+             
+         If lib.ComunicationStarted = True And suiteDone = False Then
+'              ECO_comOK = True
+'              ApplicationLog ":Application started.Comunication ok."
+             Debug.Print "comunicazione ok"
+             
+             
+
+             If suiteDone = False Then
+                PLC.ServerCommand("#SUITELINKSTART#") = "1"
+                lib.Auto_timerRequire = False
+                suiteDone = True
+             End If
+         End If
+        '===================================================
+        
+        Call Kernel   'CAMBIO ORDINE DA RIATTIVARE
        
        ' FORZATURA DATACHANGE allo start up dei dati del tracking
        
@@ -1083,9 +1113,9 @@ Static oneShot As Boolean
     ' assenza di comunicazione
     Static comok As Boolean
     
-    If ServerDisattivo = False And DB400.ErroreDB <> "GOOD" And DB402.ErroreDB <> "GOOD" And DB403.ErroreDB <> "GOOD" Then
-       If m_PaginaCorrente = PagLayout And comok = False Then frmCOMERROR.Show: comok = True
-    End If
+    'If ServerDisattivo = False And DB400.ErroreDB <> "GOOD" And DB402.ErroreDB <> "GOOD" And DB403.ErroreDB <> "GOOD" Then
+       'If m_PaginaCorrente = PagLayout And comok = False Then frmCOMERROR.Show: comok = True
+    'End If
     If DB402.Bit(8, 7) Then
        On Error Resume Next
        Shell TargetPath & "Arrestasys.exe", vbNormalFocus
@@ -1982,25 +2012,25 @@ Dim ErroriCom As Boolean
         ErroriCom = False
         
         'errori nei db
-        ErroriDB = DB400.ErroreDB <> "GOOD" Or DB402.ErroreDB <> "GOOD" Or DB403.ErroreDB <> "GOOD"
-        ErroriDB = ErroriDB Or DB411.ErroreDB <> "GOOD"
-        ErroriDB = ErroriDB Or DB420.ErroreDB <> "GOOD" Or DB422.ErroreDB <> "GOOD"
-        ErroriDB = ErroriDB Or DB470.ErroreDB <> "GOOD" Or DB486.ErroreDB <> "GOOD"
-        ErroriDB = ErroriDB Or DB473.ErroreDB <> "GOOD" Or DB480.ErroreDB <> "GOOD"
-        ErroriDB = ErroriDB Or DB450.ErroreDB <> "GOOD" Or DB410.ErroreDB <> "GOOD"
+       ' ErroriDB = DB400.ErroreDB <> "GOOD" Or DB402.ErroreDB <> "GOOD" Or DB403.ErroreDB <> "GOOD"
+       ' ErroriDB = ErroriDB Or DB411.ErroreDB <> "GOOD"
+       ' ErroriDB = ErroriDB Or DB420.ErroreDB <> "GOOD" Or DB422.ErroreDB <> "GOOD"
+       ' ErroriDB = ErroriDB Or DB470.ErroreDB <> "GOOD" Or DB486.ErroreDB <> "GOOD"
+       ' ErroriDB = ErroriDB Or DB473.ErroreDB <> "GOOD" Or DB480.ErroreDB <> "GOOD"
+       ' ErroriDB = ErroriDB Or DB450.ErroreDB <> "GOOD" Or DB410.ErroreDB <> "GOOD"
         'ErroriDB = ErroriDB Or DB460.ErroreDB <> "GOOD" Or DB416.ErroreDB <> "GOOD"
-        ErroriDB = ErroriDB Or DB425.ErroreDB <> "GOOD" Or DB448.ErroreDB <> "GOOD"
-        ErroriDB = ErroriDB Or DB426.ErroreDB <> "GOOD"
+       ' ErroriDB = ErroriDB Or DB425.ErroreDB <> "GOOD" Or DB448.ErroreDB <> "GOOD"
+       ' ErroriDB = ErroriDB Or DB426.ErroreDB <> "GOOD"
         'ErroriDB = ErroriDB Or DB465.ErroreDB <> "GOOD"
         
         'errori comunicazione
-        ErroriCom = DB400.ComError <> "" Or DB402.ComError <> "" Or DB403.ComError <> ""
-        ErroriCom = ErroriCom Or DB422.ComError <> "" Or DB470.ComError <> "" Or DB420.ComError <> ""
-        ErroriCom = ErroriCom Or DB473.ComError <> "" Or DB480.ComError <> "" Or DB486.ComError <> ""
-        ErroriCom = ErroriCom Or DB450.ComError <> "" Or DB410.ComError <> "" 'Or DB415.ComError <> ""
+       ' ErroriCom = DB400.ComError <> "" Or DB402.ComError <> "" Or DB403.ComError <> ""
+       ' ErroriCom = ErroriCom Or DB422.ComError <> "" Or DB470.ComError <> "" Or DB420.ComError <> ""
+       ' ErroriCom = ErroriCom Or DB473.ComError <> "" Or DB480.ComError <> "" Or DB486.ComError <> ""
+       ' ErroriCom = ErroriCom Or DB450.ComError <> "" Or DB410.ComError <> "" 'Or DB415.ComError <> ""
         'ErroriCom = ErroriCom Or DB416.ComError <> "" Or DB417.ComError <> "" Or DB410.ComError <> ""
-        ErroriCom = ErroriCom Or DB425.ComError <> "" Or DB448.ComError <> ""
-        ErroriCom = ErroriCom Or DB426.ComError <> ""
+       ' ErroriCom = ErroriCom Or DB425.ComError <> "" Or DB448.ComError <> ""
+       ' ErroriCom = ErroriCom Or DB426.ComError <> ""
         ' stato del semaforo di comunicazione
         StatoCom = ErroriCom Or ErroriDB
 End Property

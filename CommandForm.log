@@ -1,0 +1,113 @@
+Line 17: Class dp6.Allarme of control Allarme1 was not a loaded control class.
+Line 103: Class TabDlg.SSTab of control SSTab1 was not a loaded control class.
+Line 221: Class dp6.Barra2 of control Barra21 was not a loaded control class.
+Line 237: Class dp6.XPButton of control XPButton1 was not a loaded control class.
+Line 272: Class dp6.XPButton of control XPButton1 was not a loaded control class.
+Line 307: Class dp6.XPButton of control XPButton1 was not a loaded control class.
+Line 342: Class dp6.XPButton of control XPButton1 was not a loaded control class.
+Line 671: Class dp6.Allarme of control Allarme1 was not a loaded control class.
+Line 681: Class dp6.Allarme of control Allarme1 was not a loaded control class.
+Line 691: Class dp6.Allarme of control Allarme1 was not a loaded control class.
+Line 701: Class dp6.Allarme of control Allarme1 was not a loaded control class.
+Line 712: Class dp6.Allarme of control Allarme1 was not a loaded control class.
+Line 722: Class dp6.Allarme of control Allarme1 was not a loaded control class.
+Line 24: The property name _ExtentX in Allarme1 is invalid.
+Line 25: The property name _ExtentY in Allarme1 is invalid.
+Line 109: The property name _ExtentX in SSTab1 is invalid.
+Line 110: The property name _ExtentY in SSTab1 is invalid.
+Line 111: The property name _Version in SSTab1 is invalid.
+Line 112: The property name Tabs in SSTab1 is invalid.
+Line 113: The property name TabsPerRow in SSTab1 is invalid.
+Line 114: The property name TabHeight in SSTab1 is invalid.
+Line 126: The property name TabCaption(0) in SSTab1 is invalid.
+Line 127: The property name TabPicture(0) in SSTab1 is invalid.
+Line 128: The property name Tab(0).ControlEnabled in SSTab1 is invalid.
+Line 129: The property name Tab(0).Control(0) in SSTab1 is invalid.
+Line 130: The property name Tab(0).Control(0).Enabled in SSTab1 is invalid.
+Line 131: The property name Tab(0).ControlCount in SSTab1 is invalid.
+Line 227: The property name _ExtentX in Barra21 is invalid.
+Line 228: The property name _ExtentY in Barra21 is invalid.
+Line 244: The property name _ExtentX in XPButton1 is invalid.
+Line 245: The property name _ExtentY in XPButton1 is invalid.
+Line 246: The property name TxtText in XPButton1 is invalid.
+Line 247: The property name TxtTop in XPButton1 is invalid.
+Line 248: The property name TxtLeft in XPButton1 is invalid.
+Line 249: The property name BTYPE in XPButton1 is invalid.
+Line 250: The property name IMGTOP in XPButton1 is invalid.
+Line 251: The property name IMGLEFT in XPButton1 is invalid.
+Line 252: The property name ICONA in XPButton1 is invalid.
+Line 253: The property name ImgW in XPButton1 is invalid.
+Line 254: The property name ImgH in XPButton1 is invalid.
+Line 255: The property name ImgAllarga in XPButton1 is invalid.
+Line 256: The property name TX in XPButton1 is invalid.
+Line 257: The property name ENAB in XPButton1 is invalid.
+Line 267: The property name COLTYPE in XPButton1 is invalid.
+Line 268: The property name FOCUSR in XPButton1 is invalid.
+Line 269: The property name BCOL in XPButton1 is invalid.
+Line 270: The property name FCOL in XPButton1 is invalid.
+Line 279: The property name _ExtentX in XPButton1 is invalid.
+Line 280: The property name _ExtentY in XPButton1 is invalid.
+Line 281: The property name TxtText in XPButton1 is invalid.
+Line 282: The property name TxtTop in XPButton1 is invalid.
+Line 283: The property name TxtLeft in XPButton1 is invalid.
+Line 284: The property name BTYPE in XPButton1 is invalid.
+Line 285: The property name IMGTOP in XPButton1 is invalid.
+Line 286: The property name IMGLEFT in XPButton1 is invalid.
+Line 287: The property name ICONA in XPButton1 is invalid.
+Line 288: The property name ImgW in XPButton1 is invalid.
+Line 289: The property name ImgH in XPButton1 is invalid.
+Line 290: The property name ImgAllarga in XPButton1 is invalid.
+Line 291: The property name TX in XPButton1 is invalid.
+Line 292: The property name ENAB in XPButton1 is invalid.
+Line 302: The property name COLTYPE in XPButton1 is invalid.
+Line 303: The property name FOCUSR in XPButton1 is invalid.
+Line 304: The property name BCOL in XPButton1 is invalid.
+Line 305: The property name FCOL in XPButton1 is invalid.
+Line 314: The property name _ExtentX in XPButton1 is invalid.
+Line 315: The property name _ExtentY in XPButton1 is invalid.
+Line 316: The property name TxtText in XPButton1 is invalid.
+Line 317: The property name TxtTop in XPButton1 is invalid.
+Line 318: The property name TxtLeft in XPButton1 is invalid.
+Line 319: The property name BTYPE in XPButton1 is invalid.
+Line 320: The property name IMGTOP in XPButton1 is invalid.
+Line 321: The property name IMGLEFT in XPButton1 is invalid.
+Line 322: The property name ICONA in XPButton1 is invalid.
+Line 323: The property name ImgW in XPButton1 is invalid.
+Line 324: The property name ImgH in XPButton1 is invalid.
+Line 325: The property name ImgAllarga in XPButton1 is invalid.
+Line 326: The property name TX in XPButton1 is invalid.
+Line 327: The property name ENAB in XPButton1 is invalid.
+Line 337: The property name COLTYPE in XPButton1 is invalid.
+Line 338: The property name FOCUSR in XPButton1 is invalid.
+Line 339: The property name BCOL in XPButton1 is invalid.
+Line 340: The property name FCOL in XPButton1 is invalid.
+Line 349: The property name _ExtentX in XPButton1 is invalid.
+Line 350: The property name _ExtentY in XPButton1 is invalid.
+Line 351: The property name TxtText in XPButton1 is invalid.
+Line 352: The property name TxtTop in XPButton1 is invalid.
+Line 353: The property name TxtLeft in XPButton1 is invalid.
+Line 354: The property name BTYPE in XPButton1 is invalid.
+Line 355: The property name IMGTOP in XPButton1 is invalid.
+Line 356: The property name IMGLEFT in XPButton1 is invalid.
+Line 357: The property name ICONA in XPButton1 is invalid.
+Line 358: The property name ImgW in XPButton1 is invalid.
+Line 359: The property name ImgH in XPButton1 is invalid.
+Line 360: The property name ImgAllarga in XPButton1 is invalid.
+Line 361: The property name TX in XPButton1 is invalid.
+Line 362: The property name ENAB in XPButton1 is invalid.
+Line 372: The property name COLTYPE in XPButton1 is invalid.
+Line 373: The property name FOCUSR in XPButton1 is invalid.
+Line 374: The property name BCOL in XPButton1 is invalid.
+Line 375: The property name FCOL in XPButton1 is invalid.
+Line 678: The property name _ExtentX in Allarme1 is invalid.
+Line 679: The property name _ExtentY in Allarme1 is invalid.
+Line 688: The property name _ExtentX in Allarme1 is invalid.
+Line 689: The property name _ExtentY in Allarme1 is invalid.
+Line 698: The property name _ExtentX in Allarme1 is invalid.
+Line 699: The property name _ExtentY in Allarme1 is invalid.
+Line 709: The property name _ExtentX in Allarme1 is invalid.
+Line 710: The property name _ExtentY in Allarme1 is invalid.
+Line 719: The property name _ExtentX in Allarme1 is invalid.
+Line 720: The property name _ExtentY in Allarme1 is invalid.
+Line 729: The property name _ExtentX in Allarme1 is invalid.
+Line 730: The property name _ExtentY in Allarme1 is invalid.

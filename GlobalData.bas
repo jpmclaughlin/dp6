@@ -30,6 +30,10 @@ Public Enum UM
        n_inch3 = 22
 End Enum
 
+Global PLC As New MairCOMS7.PLC_commands
+Global tools As New MairCOMS7.Mair_Tools
+Global lib As New MairCOMS7.Library
+
 Public Conv_UM As New UMclass
 
 Global S7_nome_collegamento As String
@@ -747,6 +751,7 @@ Sub Main()
    HelpPath = CurDir & "\Help\"
    LogComPath = CurDir & "\Target\PagineHelp\Errori.htm"
    ChDir (PrgPath)
+  
    '===============================================================================
     '===============================================================================
     ' apertura database produzione

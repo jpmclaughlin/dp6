@@ -6,7 +6,7 @@ BEGIN
   DataSourceBehavior  = 0  'vbNone
   MTSTransactionMode  = 0  'NotAnMTSObject
 END
-Attribute VB_Name = "DBClassold"
+Attribute VB_Name = "DBClass"
 Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
@@ -43,8 +43,11 @@ Private m_CancelID As Long
 Private m_DBid As String
 Private m_ItemError As String
 Private m_DBerror As String
-Private WithEvents db As OPCGroup
-Attribute db.VB_VarHelpID = -1
+
+
+'Private WithEvents db As OPCGroup
+Private db As Object
+
 Private MyItems As New Collection
 Private MyItem() As Item_class
 
@@ -118,13 +121,14 @@ Sub Init(ByVal IdDB As String, ByVal Collegamento As String, ByVal NomeOgg As St
            On Error Resume Next
            OggServer.OPCGroups.Remove (IdDB)
            Set db = OggServer.OPCGroups.Add(IdDB)
-           db.IsSubscribed = True
-           db.IsActive = True
-           db.UpdateRate = 50
+           On Error GoTo 0
+'           db.IsSubscribed = True
+'           db.IsActive = True
+'           db.UpdateRate = 50
            m_DBid = IdDB
         End If
         ' imposta il tempo di update per il gruppi
-        OggServer.OPCGroups.DefaultGroupUpdateRate = 250
+'        OggServer.OPCGroups.DefaultGroupUpdateRate = 250
       End If
       DoEvents
       ComError = ""
@@ -132,12 +136,18 @@ Sub Init(ByVal IdDB As String, ByVal Collegamento As String, ByVal NomeOgg As St
       ReDim Preserve MyItem(NumItems)
       Set MyItem(NumItems) = New Item_class
       'nuova collezione
-      On Error GoTo ChiaveDoppia
+'      On Error GoTo ChiaveDoppia
       MyItems.Add MyItem(NumItems), NomeOgg
       'nuovo item nel server
       If Server = Attivo Then
-         On Error GoTo ErrCollegamento
-         Set MyItem(NumItems).Oggetto = db.OPCItems.AddItem(Collegamento, NumItems)
+'         On Error GoTo ErrCollegamento
+'         Set MyItem(NumItems).Oggetto = db.OPCItems.AddItem(Collegamento, NumItems)
+
+'==================================================
+' aggiungere nuovi dati qui
+'==================================================
+
+      '
       Else
          If InStr(NomeOgg, ".") = 0 Then
             MyItem(NumItems).valore = ValoreIni
@@ -163,8 +173,18 @@ Property Get Item(ByVal IDnome As Variant) As Variant
     
     If Server = Disattivo Then Exit Property
     On Error GoTo ItemNonPresente
-    Set ItemVal = MyItems.Item(IDnome)
-    Item = ItemVal.valore
+   ' Set ItemVal = MyItems.Item(IDnome)
+   ' Item = ItemVal.valore
+    
+    'MODIFICA DP7
+    Item = Val(PLC.Item(IDnome))
+    
+    If NumCambiamenti < 32000 Then
+       NumCambiamenti = NumCambiamenti + 1
+    Else
+       NumCambiamenti = 1
+    End If
+    DatiCambiati = True
     Exit Property
     
 ItemNonPresente:
@@ -221,8 +241,18 @@ Property Get OpcByte(ByVal nByte As Integer) As Variant
    If Server = Disattivo Then Exit Property
    On Error GoTo ItemNonPresente
    StrByte = "b" & LTrim(Str(nByte))
-   Set ItemVal = MyItems.Item(StrByte)
-   OpcByte = Val(ItemVal.valore)
+   'Set ItemVal = MyItems.Item(StrByte)
+   'OpcByte = Val(ItemVal.valore)
+   
+    'MODIFICA DP7
+    OpcByte = Val(PLC.Item(m_DBid & "," & StrByte))
+    
+    If NumCambiamenti < 32000 Then
+       NumCambiamenti = NumCambiamenti + 1
+    Else
+       NumCambiamenti = 1
+    End If
+    DatiCambiati = True
    Exit Property
     
 ItemNonPresente:
@@ -247,7 +277,15 @@ Property Let OpcByte(ByVal nByte As Integer, ByVal NuovoValore As Variant)
     If Server = Attivo Then
        SHandle(1) = ItemVal.Oggetto.ServerHandle
        NewValue(1) = NuovoValore
-       db.AsyncWrite 1, SHandle, NewValue, ErrorNr, WRITEASYNC_ID, Cancel_Id
+       'db.AsyncWrite 1, SHandle, NewValue, ErrorNr, WRITEASYNC_ID, Cancel_Id
+    
+       PLC.Item(m_DBid & "," & StrIndex) = NuovoValore
+       If NumCambiamenti < 32000 Then
+          NumCambiamenti = NumCambiamenti + 1
+       Else
+          NumCambiamenti = 1
+       End If
+       DatiCambiati = True
     Else
        ItemVal.valore = NuovoValore
        If NumCambiamenti < 32000 Then
@@ -281,8 +319,19 @@ Property Get Word(ByVal nword As Integer) As Variant
    
     On Error GoTo ItemNonPresente
     strword = "int" & LTrim(Str(nword))
-    Set ItemVal = MyItems.Item(strword)
-    Word = Val(ItemVal.valore)
+    
+    'Set ItemVal = MyItems.Item(strword)
+    'Word = Val(ItemVal.valore)
+    
+    'MODIFICA DP7
+    Word = Val(PLC.Item(m_DBid & "," & strword))
+    
+    If NumCambiamenti < 32000 Then
+       NumCambiamenti = NumCambiamenti + 1
+    Else
+       NumCambiamenti = 1
+    End If
+    DatiCambiati = True
     Exit Property
     
 ItemNonPresente:
@@ -306,9 +355,17 @@ Property Let Word(ByVal nword As Integer, ByVal NuovoValore As Variant)
     m_ItemError = "": ScritturaEseguita = False
     Set ItemVal = MyItems.Item(StrIndex)
     If Server = Attivo Then
-       SHandle(1) = ItemVal.Oggetto.ServerHandle
-       NewValue(1) = NuovoValore
-       db.AsyncWrite 1, SHandle, NewValue, ErrorNr, WRITEASYNC_ID, Cancel_Id
+       'SHandle(1) = ItemVal.Oggetto.ServerHandle
+       'NewValue(1) = NuovoValore
+       'db.AsyncWrite 1, SHandle, NewValue, ErrorNr, WRITEASYNC_ID, Cancel_Id
+       
+       PLC.Item(m_DBid & "," & StrIndex) = NuovoValore
+       If NumCambiamenti < 32000 Then
+          NumCambiamenti = NumCambiamenti + 1
+       Else
+          NumCambiamenti = 1
+       End If
+       DatiCambiati = True
     Else
        ItemVal.valore = NuovoValore
        If NumCambiamenti < 32000 Then
@@ -344,8 +401,17 @@ Property Get DWord(ByVal ndword As Integer) As Variant
    
     On Error GoTo ItemNonPresente
     StrDWord = "Dint" & LTrim(Str(ndword))
-    Set ItemVal = MyItems.Item(StrDWord)
-    DWord = Val(ItemVal.valore)
+    'Set ItemVal = MyItems.Item(StrDWord)
+    'DWord = Val(ItemVal.valore)
+    
+    'MODIFICA DP7
+    DWord = Val(PLC.Item(m_DBid & "," & StrDWord))
+    If NumCambiamenti < 32000 Then
+       NumCambiamenti = NumCambiamenti + 1
+    Else
+       NumCambiamenti = 1
+    End If
+    DatiCambiati = True
     Exit Property
     
 ItemNonPresente:
@@ -370,9 +436,17 @@ Property Let DWord(ByVal ndword As Integer, ByVal NuovoValore As Variant)
     m_ItemError = "": ScritturaEseguita = False
     Set ItemVal = MyItems.Item(StrIndex)
     If Server = Attivo Then
-       SHandle(1) = ItemVal.Oggetto.ServerHandle
-       NewValue(1) = NuovoValore
-       db.AsyncWrite 1, SHandle, NewValue, ErrorNr, WRITEASYNC_ID, Cancel_Id
+       'SHandle(1) = ItemVal.Oggetto.ServerHandle
+       'NewValue(1) = NuovoValore
+       'db.AsyncWrite 1, SHandle, NewValue, ErrorNr, WRITEASYNC_ID, Cancel_Id
+       
+       PLC.Item(m_DBid & "," & StrIndex) = NuovoValore
+       If NumCambiamenti < 32000 Then
+          NumCambiamenti = NumCambiamenti + 1
+       Else
+          NumCambiamenti = 1
+       End If
+       DatiCambiati = True
     Else
        ItemVal.valore = NuovoValore
        If NumCambiamenti < 32000 Then
@@ -407,8 +481,17 @@ Property Get Real(ByVal nreal As Integer) As Variant
    
     On Error GoTo ItemNonPresente
     StrReal = "real" & LTrim(Str(nreal))
-    Set ItemVal = MyItems.Item(StrReal)
-    Real = Val(ItemVal.valore)
+    'Set ItemVal = MyItems.Item(StrReal)
+    'Real = Val(ItemVal.valore)
+    
+    'MODIFICA DP7
+    Real = Val(PLC.Item(m_DBid & "," & StrReal))
+    If NumCambiamenti < 32000 Then
+       NumCambiamenti = NumCambiamenti + 1
+    Else
+       NumCambiamenti = 1
+    End If
+    DatiCambiati = True
     Exit Property
     
 ItemNonPresente:
@@ -432,9 +515,16 @@ Property Let Real(ByVal nreal As Integer, ByVal NuovoValore As Variant)
     m_ItemError = "": ScritturaEseguita = False
     Set ItemVal = MyItems.Item(StrIndex)
     If Server = Attivo Then
-       SHandle(1) = ItemVal.Oggetto.ServerHandle
-       NewValue(1) = NuovoValore
-       db.AsyncWrite 1, SHandle, NewValue, ErrorNr, WRITEASYNC_ID, Cancel_Id
+       'SHandle(1) = ItemVal.Oggetto.ServerHandle
+       'NewValue(1) = NuovoValore
+       'db.AsyncWrite 1, SHandle, NewValue, ErrorNr, WRITEASYNC_ID, Cancel_Id
+       PLC.Item(m_DBid & "," & StrIndex) = NuovoValore
+       If NumCambiamenti < 32000 Then
+          NumCambiamenti = NumCambiamenti + 1
+       Else
+          NumCambiamenti = 1
+       End If
+       DatiCambiati = True
     Else
        ItemVal.valore = NuovoValore
        If NumCambiamenti < 32000 Then
@@ -476,14 +566,25 @@ Property Get Bit(ByVal nByte As Integer, ByVal nBit As Byte, Optional ByVal Tipo
       StrReal = "A" & LTrim(Str(nByte)) & "." & LTrim(Str(nBit))
    End Select
    
-   Set ItemVal = MyItems.Item(StrReal)
-   Bit = ItemVal.valore
-   If Server = Attivo Then Exit Property
+   'Set ItemVal = MyItems.Item(StrReal)
+   'Bit = ItemVal.valore
+   
+   'MODIFICA DP7
+   Bit = Val(PLC.Item(m_DBid & "," & StrReal))
+   
+'   If Server = Attivo Then Exit Property
    If Bit <> 0 Then
       Bit = True
    Else
       Bit = False
    End If
+   
+    If NumCambiamenti < 32000 Then
+       NumCambiamenti = NumCambiamenti + 1
+    Else
+       NumCambiamenti = 1
+    End If
+    DatiCambiati = True
    Exit Property
     
 ItemNonPresente:
@@ -516,9 +617,16 @@ Property Let Bit(ByVal nByte As Integer, ByVal nBit As Byte, Optional ByVal Tipo
 
     Set ItemVal = MyItems.Item(StrIndex)
     If Server = Attivo Then
-       SHandle(1) = ItemVal.Oggetto.ServerHandle
-       NewValue(1) = NuovoValore
-       db.AsyncWrite 1, SHandle, NewValue, ErrorNr, WRITEASYNC_ID, Cancel_Id
+       'SHandle(1) = ItemVal.Oggetto.ServerHandle
+       'NewValue(1) = NuovoValore
+       'db.AsyncWrite 1, SHandle, NewValue, ErrorNr, WRITEASYNC_ID, Cancel_Id
+       PLC.Item(m_DBid & "," & StrIndex) = Abs(NuovoValore)
+       If NumCambiamenti < 32000 Then
+          NumCambiamenti = NumCambiamenti + 1
+       Else
+          NumCambiamenti = 1
+       End If
+       DatiCambiati = True
     Else
        ItemVal.valore = NuovoValore
        If NumCambiamenti < 32000 Then
@@ -550,22 +658,38 @@ End Property
 Property Get MaskBit(ByVal nword As Integer, ByVal nBit As Byte, Optional ByVal ExistTest As Boolean) As Variant
    Dim ItemVal As Item_class
    Dim StrInt As String
+   Dim valore As Variant
    
     If nBit >= 0 And nBit < 16 Then
         On Error GoTo ItemNonPresente
         StrInt = "int" & LTrim(Str(nword))
-        Set ItemVal = MyItems.Item(StrInt)
+        'Set ItemVal = MyItems.Item(StrInt)
+'        If nBit < 8 Then
+'           MaskBit = ItemVal.valore And 2 ^ (8 + nBit)
+'        Else
+'           MaskBit = ItemVal.valore And 2 ^ (nBit - 8)
+'        End If
+        
+        'MODIFICA DP7
+        valore = Val(PLC.Item(m_DBid & "," & StrInt))
         If nBit < 8 Then
-           MaskBit = ItemVal.valore And 2 ^ (8 + nBit)
+           MaskBit = valore And 2 ^ (8 + nBit)
         Else
-           MaskBit = ItemVal.valore And 2 ^ (nBit - 8)
+           MaskBit = valore And 2 ^ (nBit - 8)
         End If
+
         If MaskBit > 0 Then
            MaskBit = True
         Else
            MaskBit = False
         End If
     End If
+    If NumCambiamenti < 32000 Then
+       NumCambiamenti = NumCambiamenti + 1
+    Else
+       NumCambiamenti = 1
+    End If
+    DatiCambiati = True
     Exit Property
     
 ItemNonPresente:
@@ -620,9 +744,17 @@ Property Let MaskBit(ByVal nword As Integer, ByVal nBit As Byte, Optional ByVal 
         ' scrive il bit
         If StatoBit > 0 Then
            If Server = Attivo Then
-              SHandle(1) = ItemVal.Oggetto.ServerHandle
-              NewValue(1) = NuovoValore
-              db.AsyncWrite 1, SHandle, NewValue, ErrorNr, WRITEASYNC_ID, Cancel_Id
+                PLC.Item(m_DBid & "," & StrIndex) = NuovoValore
+                If NumCambiamenti < 32000 Then
+                   NumCambiamenti = NumCambiamenti + 1
+                Else
+                   NumCambiamenti = 1
+                End If
+                DatiCambiati = True
+       
+'              SHandle(1) = ItemVal.Oggetto.ServerHandle
+'              NewValue(1) = NuovoValore
+'              db.AsyncWrite 1, SHandle, NewValue, ErrorNr, WRITEASYNC_ID, Cancel_Id
            Else
               ItemVal.valore = NuovoValore
               If NumCambiamenti < 32000 Then
@@ -664,8 +796,15 @@ Sub LetturaAsync(ByVal strItem As String)
     m_ItemError = ""
     Set ItemVal = MyItems.Item(StrIndex)
     If Server = Attivo Then
-       SHandle(1) = ItemVal.Oggetto.ServerHandle
-       db.AsyncRead 1, SHandle, ErrorNr, READASYNC_ID, Cancel_Id
+'       PLC.Item(m_DBid & "," & StrIndex) = NewValue
+       If NumCambiamenti < 32000 Then
+          NumCambiamenti = NumCambiamenti + 1
+       Else
+          NumCambiamenti = 1
+       End If
+       DatiCambiati = True
+'       SHandle(1) = ItemVal.Oggetto.ServerHandle
+'       db.AsyncRead 1, SHandle, ErrorNr, READASYNC_ID, Cancel_Id
     Else
        LetturaEseguita = True
     End If
@@ -734,7 +873,13 @@ Sub Refresh()
   If Server = Disattivo Then Exit Sub
   If Server = Attivo Then
      On Error Resume Next
-     db.AsyncRefresh OPC_DS_CACHE, REFRESHASYNC_ID, Cancel_Id
+'     db.AsyncRefresh OPC_DS_CACHE, REFRESHASYNC_ID, Cancel_Id
+    If NumCambiamenti < 32000 Then
+       NumCambiamenti = NumCambiamenti + 1
+    Else
+       NumCambiamenti = 1
+    End If
+    DatiCambiati = True
   Else
      If NumCambiamenti < 32000 Then
         NumCambiamenti = NumCambiamenti + 1
@@ -782,24 +927,24 @@ Private Sub DB_AsyncWriteComplete(ByVal TransactionID As Long, ByVal NumItems As
    ScritturaEseguita = True
 End Sub
 
-Private Sub DB_DataChange(ByVal TransactionID As Long, ByVal NumItems As Long, ClientHandles() As Long, ItemValues() As Variant, Qualities() As Long, TimeStamps() As Date)
-        Dim i As Integer
-        
-        m_DBerror = "GOOD"
-        For i = 1 To NumItems
-           MyItem(ClientHandles(i)).valore = ItemValues(i)
-           If Qualities(i) <> OPC_QUALITY_GOOD Then m_DBerror = "BAD (" & MyItem(ClientHandles(i)).Nome & ")"
-           If LogDCON Then
-              LogFile LogComPath, "<tr class='DBerr'><td width='85'>" & Time$ & "</td><td width='*'><B>" & m_DBid & ":DataChange " & MyItem(ClientHandles(i)).Nome & "=" & ItemValues(i) & "</td></tr>"
-           End If
-        Next
-        If NumCambiamenti < 32000 Then
-           NumCambiamenti = NumCambiamenti + 1
-        Else
-           NumCambiamenti = 1
-        End If
-        DatiCambiati = True
-End Sub
+'Private Sub DB_DataChange(ByVal TransactionID As Long, ByVal NumItems As Long, ClientHandles() As Long, ItemValues() As Variant, Qualities() As Long, TimeStamps() As Date)
+'        Dim i As Integer
+'
+'        m_DBerror = "GOOD"
+'        For i = 1 To NumItems
+'           MyItem(ClientHandles(i)).valore = ItemValues(i)
+'           If Qualities(i) <> OPC_QUALITY_GOOD Then m_DBerror = "BAD (" & MyItem(ClientHandles(i)).Nome & ")"
+'           If LogDCON Then
+'              LogFile LogComPath, "<tr class='DBerr'><td width='85'>" & Time$ & "</td><td width='*'><B>" & m_DBid & ":DataChange " & MyItem(ClientHandles(i)).Nome & "=" & ItemValues(i) & "</td></tr>"
+'           End If
+'        Next
+'        If NumCambiamenti < 32000 Then
+'           NumCambiamenti = NumCambiamenti + 1
+'        Else
+'           NumCambiamenti = 1
+'        End If
+'        DatiCambiati = True
+'End Sub
 
 
 'Property Get NomeItem(ByVal IDnome As Integer) As String
@@ -826,14 +971,14 @@ End Property
 '
 Property Get ErroreDB() As String
     ErroreDB = m_DBerror
-    If m_DBerror = "" Then m_DBerror = "Connect OFF"
-    If LogErrON And ComError = "" Then
-        If m_DBerror = "GOOD" Then
-          LogFile LogComPath, "<tr class='COM'><td width='85'>" & Time$ & "</td><td width='*'><B>" & m_DBid & ":Status DB(I/O Items):" & m_DBerror & "</td></tr>"
-        Else
-          LogFile LogComPath, "<tr class='DBerr'><td width='85'>" & Time$ & "</td><td width='*'><B>" & m_DBid & ":Status DB(I/O Items):" & m_DBerror & "</td></tr>"
-        End If
-   End If
+    'If m_DBerror = "" Then m_DBerror = "Connect OFF"
+    'If LogErrON And ComError = "" Then
+    '    If m_DBerror = "GOOD" Then
+    '      LogFile LogComPath, "<tr class='COM'><td width='85'>" & Time$ & "</td><td width='*'><B>" & m_DBid & ":Status DB(I/O Items):" & m_DBerror & "</td></tr>"
+    '    Else
+    '      LogFile LogComPath, "<tr class='DBerr'><td width='85'>" & Time$ & "</td><td width='*'><B>" & m_DBid & ":Status DB(I/O Items):" & m_DBerror & "</td></tr>"
+    '    End If
+   'End If
 End Property
 
 Private Function funcErrore(ByVal Qualità As Long) As String
@@ -1068,4 +1213,5 @@ End Property
 Property Get MultiReadValore(ByVal Index As Long)
     If Index <= NumItems Then MultiReadValore = MyItem(Index).valore
 End Property
+
 
